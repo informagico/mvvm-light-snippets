@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mvvmpb</Title>
+			<Shortcut>mvvmpb</Shortcut>
+			<Description>Code snippet for property with GalaSoft.MvvmLight.ObservableObject</Description>
+			<Author>Alessandro Magoga</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Property type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>MyProperty</Default>
+				</Literal>
+				<Literal>
+					<ID>field</ID>
+					<ToolTip>The variable backing this property</ToolTip>
+					<Default>_myVar</Default>
+				</Literal>
+				<Literal>
+					<ID>changemethod</ID>
+					<ToolTip>The method responsible for setting the field value and firing INotifyPropertyChanged on ObservableObject</ToolTip>
+					<Default>Set</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[private $type$ $field$;
+	public $type$ $property$ { get => $field$; set => $changemethod$(ref $field$, value); }
+	$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mvvmrc</Title>
+			<Shortcut>mvvmrc</Shortcut>
+			<Description>Code snippet for GalaSoft.MvvmLight.Command.RelayCommand</Description>
+			<Author>Alessandro Magoga</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>command</ID>
+					<ToolTip>Command name</ToolTip>
+					<Default>MyCommand</Default>
+				</Literal>
+				<Literal>
+					<ID>field</ID>
+					<ToolTip>The variable backing this command</ToolTip>
+					<Default>_myCommand</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[private RelayCommand $field$;
+	public RelayCommand $command$
+	{
+		get
+		{
+			return $field$
+				?? ($field$ = new RelayCommand(
+				() =>
+				{
+				}));
+		}
+	}
+	$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
